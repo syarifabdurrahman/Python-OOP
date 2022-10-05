@@ -4,6 +4,7 @@ MODULARISASI dengan function
 """
 
 # from gempa_terkini import ekstraksi_data,tampilkan_data
+from OOP.Person_inheritance import Contact
 import gempa_terkini
 
 

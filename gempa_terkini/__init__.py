@@ -13,11 +13,27 @@
 import requests
 import bs4
 
+class Bencana:
+    def __init__(self,description):
+        self.description = description
+        
 
-class GempaTerkini:
+    def ekstraksi_data(self):
+        pass
+
+    def tampilkan_data(self):
+        pass
+
+    def run(self):
+        self.ekstraksi_data()
+        self.tampilkan_data()
+
+
+class GempaTerkini(Bencana):
     def __init__(self):
-        self.description='To get the latest earthquake information in indonesia form BMKG.go.id\n'
         self.result=None
+
+        Bencana.__init__(self,'To get the latest earthquake information in indonesia form BMKG.go.id\n')     
 
     def ekstraksi_data(self):
         try:
@@ -88,5 +104,4 @@ class GempaTerkini:
 if __name__ == '__main__':
     gempa_di_indonesia = GempaTerkini()
     print('Deskripsi class ', gempa_di_indonesia.description)
-    gempa_di_indonesia.ekstraksi_data()
-    gempa_di_indonesia.tampilkan_data()
+    gempa_di_indonesia.run()
